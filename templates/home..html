@@ -1,0 +1,12 @@
+<h1>welcome to my game</h1>
+<form action="##" method="post">
+<input type="text" name="pseudo" placeholder="Pseudo" required>
+<button href="#" role="button" type="submit">
+    <span>Se connecter</span>
+</button>
+
+</form>
+{ % if pseudo %}
+<p id="Montre vaincu"> {{ pseudo }} a vaincu {{ compteurkill }} monstres !</p>
+<p> Les montres: {{ listeVaincus }} ont été éradiqués </p>
+{ % endif %}
