@@ -1,7 +1,8 @@
 from genMob import *
+from random import choice
 
 def createMob():
-   liste_nom_mobs = [titi, tutu, toto]
-   nommonstre = random.choice(liste_nom_mobs)
+   monsterlist = ["pikachu", "bulbizarre", "salamèche","carapuce", "Rondoudou"]
+   nommonstre = choice(monsterlist)
    
-   return generationmonstre(nommonstre)
+   return genMob(nommonstre)
