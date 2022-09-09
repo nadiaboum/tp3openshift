@@ -1,4 +1,6 @@
 
+import sys
+import os
 
 from flask import Flask, render_template, request , send_file, redirect, url_for, Response, redirect
 from personnage import *
@@ -6,10 +8,7 @@ from createmob import *
 from fight import *
 from compteurennemistues import *
 
-
 app = Flask(__name__)
-import sys
-import os
 
 @app.route('/', methods=['GET' , 'POST'])
 
