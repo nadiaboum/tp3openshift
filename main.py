@@ -1,8 +1,5 @@
 from flask import Flask, render_template, request , send_file, redirect, url_for, Response, redirect
-from personnage.py import *
-from createmob.py import *
-from fight.py import *
-from compteurennemistues.py import *
+
 
 
 app = Flask(__name__)
