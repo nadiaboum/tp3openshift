@@ -1,0 +1,19 @@
+<h1>Welcome to MonsterGame</h1>
+
+<form class="grid" action ="/" method="post">
+  <center></center>
+  <label for = "Name">Entrez votre nom:</label>
+  <input type="text" name="pseudo" placeholder="Pseudo" required>
+ 
+  <button href="#" role="button" type="submit">
+    <span>Validez</span>
+  </button>
+
+
+</form>
+
+
+{% if pseudo %}
+<p id="Le monstre est vaincu"> {{ pseudo }} a vaincu {{ compteurtues }} monstres !</p>
+<p> Tous les montres: {{ listevaincus }} ont été vaincus </p>
+{% endif %}
