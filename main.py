@@ -12,7 +12,7 @@ import os
 @app.route('/', methods=['GET' , 'POST'])
 
 
-def Menu():
+def home():
     if request.form:
         compteurtues = 0
         listevaincus = []
