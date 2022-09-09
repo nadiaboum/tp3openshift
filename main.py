@@ -1,8 +1,7 @@
 
 
 from flask import Flask, render_template, request , send_file, redirect, url_for, Response, redirect
-import fight, createMob, personnage
-from compteurEnnemistues import *
+
 
 
 app = Flask(__name__)
