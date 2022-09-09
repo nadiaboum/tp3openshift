@@ -1,4 +1,9 @@
 from flask import Flask, render_template, request , send_file, redirect, url_for, Response, redirect
+from personnage.py import *
+from createmob.py import *
+from fight.py import *
+from compteurennemistues.py import *
+
 
 app = Flask(__name__)
 import sys
@@ -7,19 +12,19 @@ import os
 @app.route('/', methods=['GET' , 'POST'])
 
 
-def home():
+def Menu():
     if request.form:
         compteurtues = 0
         listevaincus = []
         pseudo = request.form['pseudo']
 
-        monpersonnage = personnage(pseudo, 20,6,3)
+        monperso = personnage(pseudo, 20,6,3)
         
-        while monpersonnage[1] > 0:
+        while monperso[1] > 0:
             monstreennemi = createMob()
-            fight(monpersonnage, monstreennemi)
+            fight(monperso, monstreennemi)
 
-            if monpersonnage[1] > 0:
+            if monperso[1] > 0:
                 compteurtues = compteurennemistues(compteurtues)
                 listevaincus.append(monstreennemi[0])
         return render_template("home.html" , pseudo=pseudo, compteurtues=compteurtues , listevaincus=listevaincus)
